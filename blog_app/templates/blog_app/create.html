@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block page_title %}<h3 style="text-align: center;">New Post</h3>{% endblock %}
+
+{% block page_content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% endblock %}
